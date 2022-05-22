@@ -1,5 +1,5 @@
 .banner {
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   /* background: url("../images/frontpage.JPG"); */
   background: url("../images/frontpage.JPG");
@@ -27,10 +27,11 @@
 } */
 
 .banner .title {
-  margin-top: 140px;
+  margin-top: 250px;
+  margin-left:-250px;
 }
 .title {
-  margin-top: 30%;
+  margin-top: 50%;
 }
 .tiles-heading i {
   color: rgba(25, 118, 210, 1);
@@ -58,4 +59,51 @@
 }
 .words span {
   color: lightskyblue;
+}
+
+
+.div1-tiles
+{
+  list-style: none;
+  margin: 15px 0;
+  color: #fff;
+  line-height: 25px;
+  padding: 0.7em;
+  margin: 0.6em;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  flex-wrap: wrap;
+}
+
+.div1-tiles div{
+  width: 300px !important;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  margin:5px 5px;
+  color:white;
+  padding: 10px 10px;
+}
+.list-main{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.list-main div{
+  width:600px;
+}
+.div1-tiles-img{
+  background: url("/images/hiring.jpg");
+  background-size:cover;
+  height: 500px;
+  background-position-x:50px  ;
+}
+@media only screen and (max-width: 600px) {
+  .div1-tiles
+{
+  height:auto;  
+}
+.div1-tiles-img{
+  background-position-x:-70px ;
+}
 }

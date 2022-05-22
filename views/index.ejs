@@ -13,22 +13,58 @@
 
 <body>
   <% include includes/nav %>
+  <!-- <% include includes/slider2 %> -->
+  <section class="black">
+    <div class="carousel carousel-slider" data-indicators="true">
+      <div class="carousel-fixed-item">
+        <div class="container">
+          <h1 class="white-text">Materialize Carousel</h1>
+          <a class="btn waves-effect white grey-text darken-text-2" href="https://codepen.io/collection/nbBqgY/" target="_blank">button</a>
+        </div>
+      </div>
+      <div class="carousel-item red lighten-2 white-text" href="#one!">
+        <div class="container">
+          <h2>First Slide</h2>
+          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>  
+      </div>
+      <div class="carousel-item amber darken-2 white-text" href="#two!">
+        <div class="container">
+          <h2>Second Slide</h2>
+          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>  
+      </div>
+      <div class="carousel-item green white-text" href="#three!">
+        <div class="container">
+          <h2>Third Slide</h2>
+          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>  
+      </div>
+      <div class="carousel-item blue white-text" href="#four!">
+        <div class="container">
+          <h2>Fourth Slide</h2>
+          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>  
+      </div>
+    </div>
+  </section>
 
   <!-- <h1><%= title %></h1>
   <p>Welcome to <%= title %></p>
   <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a> -->
     <div class="main">
-  <div class="banner home-banner">
+      <!-- start of banner container -->
+  <!-- <div class="banner home-banner">
     <div class="bannerbg">
       <div class="row">
           <div class="col l12">
-              <div class="title index-banner">
+              <div class="title index-banner"> -->
           
                   <!-- <h2 align="center"><%= title  %> </h2> -->
-                  <div class="row center">
+                  <!-- <div class="row center"> -->
                     <!-- <h5 class="header col s12 ">Looking for a Job in India, We connect you to your desiered dream job </h5> -->
-                  </div>
-                  <div class="row center">
+                  <!-- </div> -->
+                  <!-- <div class="row center">
                     <a href="/jobs" id="download-button" class="btn-large waves-effect waves-light blue darken-2">
                     <i class="material-icons left">search</i> Search for Your Dream Job
                       </a>
@@ -39,7 +75,8 @@
       </div>
      
     </div>
-  </div>
+  </div> -->
+  <!-- end of slider containter -->
 
 
   <div class="container">
@@ -49,67 +86,38 @@
       <div class="row center" style="margin-top:50px">
         <h4 style=color:black><b>We are hiring apply now!</b></h4>
       </div>
-      <div class="row">
-        <!-- start of first colum  -->
-       <div class="col l6 s12 tiles">
-        <div class="row tiles-heading">
-       <i class="material-icons small left">search</i> <span> Search for jobs  </span>
-        </div>
-        <div class="row">
-            <p>
-              At connect2india you can search for the latest jobs and apply to the faviourate job...
-              <a href="/jobs"> head to jobs section</a>
-            </p>
-        </div>
-       </div>
-       <!-- end of first column -->
-
-       <!-- start of first colum  -->
-       <div class="col l6 s12 tiles">
-          <div class="row tiles-heading">
-         <i class="material-icons small left">location_on</i> <span> Multiple Locations  </span>
-          </div>
-          <div class="row">
-              <p>
-                We have opening in multiple locations apply for the job that suits you best!
-                <a href="/jobs"> see all the openings</a>
-              </p>
-          </div>
-         </div>
-         <!-- end of first column -->
-           <!-- start of first colum  -->
-       <div class="col l6 tiles">
-          <div class="row tiles-heading">
-         <i class="material-icons small left">mood</i> <span> Customer Support  </span>
-          </div>
-          <div class="row">
-              <p>
-                You can reach us anytime for your help and we are there 24 * 7 for you...
-                <a href="/jobs"> Contact us</a>
-              </p>
-          </div>
-         </div>
-         <!-- end of first column -->
-  
-         <!-- start of first colum  -->
-         <div class="col l6 tiles">
-            <div class="row tiles-heading">
-           <i class="material-icons small left">touch_app</i> <span> Hassle free apply </span>
-            </div>
-            <div class="row">
-                <p>
-                  Never know where to apply directly apply by reching out to us
-                  <a href="/apply"> head to apply section</a>
-                </p>
-            </div>
-           </div>
-           <!-- end of first column -->
+      
 
       </div>
 
     </div>
   </div>
   <!-- end of container section -->
+
+  <!-- start of list section -->
+  <div class="list-main">
+    <div class="div1-tiles">
+      <div> B.Tech</div>
+      <div>Diploma</div>
+      <div> BBA</div>
+      <div> MBA</div>
+      <div> MCA</div>
+      <div> Graduates</div>
+      <div> Civil Jobs</div>
+      <div> B.Tech</div>
+      <div>Diploma</div>
+      <div> BBA</div>
+      <div> MBA</div>
+      <div> MCA</div>
+      <div> Graduates</div>
+      <div> Civil Jobs</div>
+    </div>
+      <div class="div1-tiles-img">
+      </div>
+  </div>
+</div>
+  
+  <!-- end of list section -->
 
   <!-- start of words from campany -->
   <div class="words">
@@ -120,8 +128,6 @@
         </div>
     </div>
   </div>
-
-
   <!-- <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -134,6 +140,8 @@
     <!-- <div class="parallax"><img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=746" alt="Unsplashed background img 2"></div>
   </div> -->
   <!-- caurosel option starts here -->
+
+
   <% include includes/slider %>
 
 
@@ -175,7 +183,23 @@
   <% include includes/footer %>
 
   <script>
-    
+    $(document).ready(function(){
+  $('.carousel').carousel(
+  {
+    dist: 0,
+    padding: 0,
+    fullWidth: true,
+    indicators: true,
+    duration: 100,
+  }
+  );
+});
+
+autoplay()   
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}
   </script>
 </body>
 

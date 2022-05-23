@@ -7,6 +7,11 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Connect2India247" });
 });
 
+/* GET valid page. */
+router.get("/valid", function (req, res, next) {
+  res.render("valid", { title: "Connect2India247" });
+});
+
 // route for apply form that will carry the data from list of jobs
 router.get("/apply", function (req, res, next) {
   res.render("apply", { title: "Connect2India247" });

@@ -107,3 +107,10 @@
   background-position-x:-70px ;
 }
 }
+ .btnfixed
+ {
+  position: absolute;
+  top: 350px;
+  right: 45%;
+  z-index: 100;
+ }

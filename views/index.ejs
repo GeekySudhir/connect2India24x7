@@ -13,41 +13,7 @@
 
 <body>
   <% include includes/nav %>
-  <!-- <% include includes/slider2 %> -->
-  <section class="black">
-    <div class="carousel carousel-slider" data-indicators="true">
-      <div class="carousel-fixed-item">
-        <div class="container">
-          <h1 class="white-text">Materialize Carousel</h1>
-          <a class="btn waves-effect white grey-text darken-text-2" href="https://codepen.io/collection/nbBqgY/" target="_blank">button</a>
-        </div>
-      </div>
-      <div class="carousel-item red lighten-2 white-text" href="#one!">
-        <div class="container">
-          <h2>First Slide</h2>
-          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
-        </div>  
-      </div>
-      <div class="carousel-item amber darken-2 white-text" href="#two!">
-        <div class="container">
-          <h2>Second Slide</h2>
-          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
-        </div>  
-      </div>
-      <div class="carousel-item green white-text" href="#three!">
-        <div class="container">
-          <h2>Third Slide</h2>
-          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
-        </div>  
-      </div>
-      <div class="carousel-item blue white-text" href="#four!">
-        <div class="container">
-          <h2>Fourth Slide</h2>
-          <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
-        </div>  
-      </div>
-    </div>
-  </section>
+  <% include includes/slider2 %>
 
   <!-- <h1><%= title %></h1>
   <p>Welcome to <%= title %></p>
@@ -93,7 +59,11 @@
     </div>
   </div>
   <!-- end of container section -->
-
+  <div class="btnfixed">
+    <a href="/jobs" id="download-button" class="btn-large waves-effect waves-light blue darken-2">
+        <i class="material-icons left">search</i> Search Jobs!
+          </a>       
+  </div>
   <!-- start of list section -->
   <div class="list-main">
     <div class="div1-tiles">
@@ -104,13 +74,13 @@
       <div> MCA</div>
       <div> Graduates</div>
       <div> Civil Jobs</div>
-      <div> B.Tech</div>
-      <div>Diploma</div>
-      <div> BBA</div>
-      <div> MBA</div>
-      <div> MCA</div>
-      <div> Graduates</div>
-      <div> Civil Jobs</div>
+      <div> Aptitude Assessment</div>
+      <div>Job Search Correspondence</div>
+      <div> Guidance on Self-Employment</div>
+      <div> Comprehensive Career Assessment</div>
+      <div> Interview Preparation</div>
+      <div> Admission Advice</div>
+      <div> Civil Jobs - Interview Preparation</div>
     </div>
       <div class="div1-tiles-img">
       </div>
@@ -144,23 +114,29 @@
 
   <% include includes/slider %>
 
-
+ 
   <div class="container">
     <div class="section">
 
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h3>Success Story</h3>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
+          <h3>Success Stories</h3>
+          <!-- <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
             nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
             eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
             pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
             Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
             eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae;</p>
+            posuere cubilia Curae;</p> -->
+
+            
+              <% include includes/reviews %>
+        
         </div>
       </div>
+
+
 
     </div>
   </div>
@@ -183,23 +159,6 @@
   <% include includes/footer %>
 
   <script>
-    $(document).ready(function(){
-  $('.carousel').carousel(
-  {
-    dist: 0,
-    padding: 0,
-    fullWidth: true,
-    indicators: true,
-    duration: 100,
-  }
-  );
-});
-
-autoplay()   
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 4500);
-}
   </script>
 </body>
 

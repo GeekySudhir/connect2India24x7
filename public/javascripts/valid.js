@@ -4,23 +4,32 @@
 
     var email_check = document.getElementById("email").value
     var password_check = document.getElementById("password").value
+
     var email_error = document.getElementById('email_error');
     var pass_error = document.getElementById('pass_error');
     
     email.addEventListener('textInput', email_Verify);
     password.addEventListener('textInput', pass_Verify);
     
-    
+
 
     function validated(){
         var email_check = document.getElementById("email").value
         var password_check = document.getElementById("password").value
-        console.log("email",email_check,"password",password_check)
+        console.log(email_check,password_check)
 
-        if (email.value.length < 3) {
+        if (email_check=="admin" && password_check=="admin")
+        {
+            console.log("Pass")
+            document.location.href = "/add/job";
+        }
 
-       
-
+                else{
+                document.location.href = "/valid";
+                alert("Try with correct Username && Password")
+                }
+            
+            if (email.value.length < 8) {
             email.style.border = "1px solid red";
             email_error.style.display = "block";
             email.focus();
@@ -36,7 +45,7 @@
         }
 
       
-        if (password.value.length < 4) {
+        if (password.value.length < 8) {
             password.style.border = "1px solid red";
             pass_error.style.display = "block";
             password.focus();
@@ -66,4 +75,6 @@
         }
     }
     
-    
+    function back(){
+        document.location.href = "/";
+    }

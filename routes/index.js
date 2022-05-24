@@ -95,7 +95,7 @@ router.get("/job/detail/:uid", async function (req, res, next) {
 });
 
 router.get("*", function (req, res, next) {
-  return res.render("index", { title: "connect2India247" });
+  return res.render("error404", { title: "connect2India247" });
 });
 
 module.exports = router;

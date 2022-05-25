@@ -26,7 +26,7 @@
 
                 else{
                 document.location.href = "/valid";
-                alert("Try with correct Username && Password")
+                alert("Try with correct Username and Password")
                 }
             
             if (email.value.length < 8) {

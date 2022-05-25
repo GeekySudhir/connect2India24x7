@@ -72,6 +72,7 @@
   margin: 0.6em;
   display: flex;
   flex-direction: column;
+
   height: 450px;
   flex-wrap: wrap;
 }
@@ -80,9 +81,18 @@
   width: 300px !important;
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  margin:0px auto;
   margin:5px 5px;
   color:white;
   padding: 10px 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .div1-tiles div{
+    margin:0px auto;
+
+    margin-top:5px;
+  }
 }
 .list-main{
   display: flex;
@@ -112,5 +122,5 @@
   position: absolute;
   top: 350px;
   right: 45%;
-  z-index: 100;
+  z-index: 100; 
  }

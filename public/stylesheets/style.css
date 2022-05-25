@@ -9,7 +9,7 @@
 
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "Poppins", sans-serif;
   color: rgba(33, 33, 33, 0.7) !important;
 }

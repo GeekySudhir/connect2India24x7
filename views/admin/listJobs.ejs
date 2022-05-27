@@ -14,8 +14,11 @@
                 <h4 align="center"><b> SEARCH AND CUSTOMIZE THE JOB</b></h4>
                 <br>
                 <span>
-                    <a href="/add/job" class="btn-large waves-effect waves-light green darken-2"> <i class="material-icons left">add</i>ADD NEW JOBS</a>
-                    <a href="/list/job" class="btn-large waves-effect waves-light orange darken-2"> <i class="material-icons left">delete</i>DELETE,VIEW JOBS</a>
+                    <a href="/admin/cat/connect/new/add/job" class="btn-large waves-effect waves-light green darken-2">
+                        <i class="material-icons left">add</i>ADD NEW JOBS</a>
+                    <a href="/admin/cat/connect/new/list/job"
+                        class="btn-large waves-effect waves-light orange darken-2"> <i
+                            class="material-icons left">delete</i>DELETE,VIEW JOBS</a>
 
                 </span>
             </div>
@@ -88,7 +91,7 @@
                                 onclick="handleDelete()">
                                 <i class="small material-icons">delete</i>
                             </button>
-                            <a href=<%= "/job/delete/"+data[i]._id %>
+                            <a href=<%= "/admin/cat/connect/new/job/delete/"+data[i]._id %>
                                 class="waves-effect waves-light btn-small hide red-text">Delete</a>
                         </td>
                         </td>

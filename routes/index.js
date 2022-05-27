@@ -8,7 +8,7 @@ router.get("/", function (req, res, next) {
 });
 
 /* GET valid page. */
-router.get("/valid", function (req, res, next) {
+router.get("/admin/cat/connect/valid", function (req, res, next) {
   res.render("valid", { title: "Connect2India247" });
 });
 
@@ -20,7 +20,6 @@ router.get("/apply", function (req, res, next) {
 // route for jobs lists from the database
 router.get("/jobs", async function (req, res, next) {
   var data = await Jobs.find().limit(10);
-  console.log("from data:", data);
   res.render("jobs", {
     title: "connect2India247",
     data: data.reverse(),
@@ -28,9 +27,26 @@ router.get("/jobs", async function (req, res, next) {
   });
 });
 
+// route for seeing a specific job
+router.get("/job/detail/:uid", async function (req, res, next) {
+  Jobs.findById({ _id: req.params.uid })
+    .then((docs) => {
+      res.render("job", { title: "connect2India247", data: docs });
+    })
+    .catch((err) => {
+      res.status(200).send(err);
+    });
+});
+
+// admin routes
+
 // route for adding a specific job
-router.post("/add/job", async function (req, res, next) {
-  console.log(req.body, "inserting a document");
+router.get("/admin/cat/connect/new/add/job", function (req, res, next) {
+  res.render("admin/addJobs", { title: "", status: undefined });
+});
+
+// route for adding a specific job
+router.post("/admin/cat/connect/new/add/job", async function (req, res, next) {
   var job = new Jobs({ ...req.body });
   await job.save((err, result) => {
     if (err) {
@@ -48,13 +64,9 @@ router.post("/add/job", async function (req, res, next) {
 
   // res.render("admin/addJobs", { title: "" });
 });
-// route for adding a specific job
-router.get("/add/job", function (req, res, next) {
-  res.render("admin/addJobs", { title: "", status: undefined });
-});
 
 // for seeing the existing all the jobs
-router.get("/list/job", async function (req, res, next) {
+router.get("/admin/cat/connect/new/list/job", async function (req, res, next) {
   var data = await Jobs.find();
   res.render("admin/listJobs", {
     title: "connect2India247",
@@ -64,35 +76,23 @@ router.get("/list/job", async function (req, res, next) {
 });
 
 //for deleting a specific job
-router.get("/job/delete/:uid", async function (req, res, next) {
-  console.log("Request Id", req.params.uid);
-  await Jobs.findByIdAndDelete({ _id: req.params.uid })
-    .then(async () => {
-      var data = await Jobs.find();
-      console.log("from data:", data);
-      res.render("admin/listJobs", {
-        title: "connect2India247",
-        status: true,
-        data: data.reverse(),
+router.get(
+  "/admin/cat/connect/new/job/delete/:uid",
+  async function (req, res, next) {
+    await Jobs.findByIdAndDelete({ _id: req.params.uid })
+      .then(async () => {
+        var data = await Jobs.find();
+        res.render("admin/listJobs", {
+          title: "connect2India247",
+          status: true,
+          data: data.reverse(),
+        });
+      })
+      .catch((err) => {
+        return res.status(200).send("some error happend while trying this");
       });
-    })
-    .catch((err) => {
-      return res.status(200).send("some error happend while trying this");
-    });
-});
-
-// route for seeing a specific job
-router.get("/job/detail/:uid", async function (req, res, next) {
-  console.log("Request Id", req.params.uid);
-  Jobs.findById({ _id: req.params.uid })
-    .then((docs) => {
-      res.render("job", { title: "connect2India247", data: docs });
-    })
-    .catch((err) => {
-      res.status(200).send(err);
-    });
-  // console.log("from data:", data);
-});
+  }
+);
 
 router.get("*", function (req, res, next) {
   return res.render("error404", { title: "connect2India247" });

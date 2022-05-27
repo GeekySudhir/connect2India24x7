@@ -13,6 +13,7 @@
     background-size: cover;
     height: 60vh;
   }
+
   .banner .title {
     margin-top: 80px !important;
   }
@@ -28,26 +29,31 @@
 
 .banner .title {
   margin-top: 250px;
-  margin-left:-250px;
+  margin-left: -250px;
 }
+
 .title {
   margin-top: 50%;
 }
+
 .tiles-heading i {
   color: rgba(25, 118, 210, 1);
   /* color:#19227c; */
 }
+
 .tiles-heading span {
   font-size: 1.5em;
 }
+
 .tiles {
   padding: 40px 40px !important;
 }
+
 .words {
   padding: 40px 40px;
   /* background: rgba(25, 118, 210, 1); */
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
   color: white;
   text-transform: uppercase;
   letter-spacing: 2;
@@ -57,13 +63,13 @@
   line-height: 140%;
   font-weight: 200;
 }
+
 .words span {
   color: lightskyblue;
 }
 
 
-.div1-tiles
-{
+.div1-tiles {
   list-style: none;
   margin: 15px 0;
   color: #fff;
@@ -77,50 +83,56 @@
   flex-wrap: wrap;
 }
 
-.div1-tiles div{
+.div1-tiles div {
   width: 300px !important;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-  margin:0px auto;
-  margin:5px 5px;
-  color:white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  margin: 0px auto;
+  margin: 5px 5px;
+  color: white;
   padding: 10px 10px;
 }
 
 @media only screen and (max-width: 500px) {
-  .div1-tiles div{
-    margin:0px auto;
+  .div1-tiles div {
+    margin: 0px auto;
 
-    margin-top:5px;
+    margin-top: 5px;
   }
 }
-.list-main{
+
+.list-main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.list-main div{
-  width:600px;
+
+.list-main div {
+  width: 600px;
 }
-.div1-tiles-img{
+
+.div1-tiles-img {
   background: url("/images/hiring.jpg");
-  background-size:cover;
+  background-size: cover;
   height: 500px;
-  background-position-x:50px  ;
+  background-position-x: 50px;
 }
+
 @media only screen and (max-width: 600px) {
-  .div1-tiles
-{
-  height:auto;  
+  .div1-tiles {
+    height: auto;
+  }
+
+  .div1-tiles-img {
+    background-position-x: -70px;
+  }
+
+
 }
-.div1-tiles-img{
-  background-position-x:-70px ;
-}
-}
- .btnfixed
- {
+
+.btnfixed {
   position: absolute;
   top: 350px;
   right: 45%;
-  z-index: 100; 
- }
+  z-index: 90;
+}

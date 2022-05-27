@@ -18,8 +18,11 @@
                 <h4 align="center"><b> Admin | Add new Jobs</b> </h4>
                 <br>
                 <span>
-                    <a href="/add/job" class="btn-large waves-effect waves-light green darken-2"> <i class="material-icons left">add</i>ADD NEW JOBS</a>
-                    <a href="/list/job" class="btn-large waves-effect waves-light orange darken-2"> <i class="material-icons left">delete</i>DELETE,VIEW JOBS</a>
+                    <a href="/admin/cat/connect/new/add/job" class="btn-large waves-effect waves-light green darken-2">
+                        <i class="material-icons left">add</i>ADD NEW JOBS</a>
+                    <a href="/admin/cat/connect/new/list/job"
+                        class="btn-large waves-effect waves-light orange darken-2"> <i
+                            class="material-icons left">delete</i>DELETE,VIEW JOBS</a>
 
                 </span>
             </div>
@@ -55,7 +58,7 @@
         <div class="add-job">
             <h5 align="center"><b>Enter a new job</b> </h5>
             <p align="center">Jobs entered here will reflect in jobs list.</p>
-            <form method="POST" action="/add/job">
+            <form method="POST" action="/admin/cat/connect/new/add/job">
                 <div class="row">
                     <div class="input-field col s6 l4">
                         <input id="last_name" type="text" class="validate" name="position">
@@ -97,7 +100,7 @@
 
                 </div>
                 <div class="row">
-                    <textarea name="description"  type="text" rows="10" placeholder="Add Some Discription"
+                    <textarea name="description" type="text" rows="10" placeholder="Add Some Discription"
                         class="discription-text" value="Some description"></textarea>
                 </div>
                 <div class="row center">

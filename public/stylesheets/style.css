@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 body {
+  background-color: #fff;
   width: 100%;
   overflow-x: hidden !important;
   font-family: "Poppins", sans-serif;
@@ -78,17 +79,21 @@ footer.page-footer {
   background-size: cover;
   background-position-y: -300px;
 }
+
 .banner-logo {
   height: 100vh !important;
 }
+
 .banner-logo-div {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
+
 .banner-logo-div img {
   height: 300px;
 }
+
 @media only screen and (max-width: 600px) {
   .home-banner h2 {
     font-size: 36px;
